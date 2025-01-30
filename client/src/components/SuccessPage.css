@@ -1,0 +1,150 @@
+.success-page {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 500px; /* Set a max-width for larger screens */
+  margin: 0 auto; /* This centers it horizontally */
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  height: auto; /* Set to auto to allow the content to adjust */
+  min-height: 300px; /* Set a minimum height */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Vertically and horizontally center the card */
+}
+
+.success-page h1 {
+  color: #28a745; /* Green color for success */
+  font-size: 24px;
+  margin-bottom: 20px;
+  animation: confetti 1s ease-in-out;
+}
+
+.success-page p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+@keyframes confetti {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.action-buttons button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 15px 20px; /* Increase height of the buttons */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  width: 160px; /* Adjust button width */
+}
+
+.action-buttons button:hover {
+  background-color: #218838;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.social-buttons button {
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  padding: 15px 20px; /* Increase height of the buttons */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  width: 160px; /* Adjust button width */
+}
+
+.social-buttons button:last-child {
+  background-color: #0077b5;
+}
+
+.social-buttons button:hover {
+  background-color: #005582;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .success-page {
+    padding: 15px;
+    max-width: 90%; /* Make the success page occupy more width on smaller screens */
+  }
+
+  .success-page h1 {
+    font-size: 22px; /* Adjust heading font size */
+  }
+
+  .success-page p {
+    font-size: 14px; /* Adjust paragraph font size */
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    align-items: center; /* Center the buttons on smaller screens */
+  }
+
+  .action-buttons button {
+    width: 100%;
+    padding: 15px 0; /* Make buttons fill the width on smaller devices */
+  }
+
+  .social-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-buttons button {
+    width: 100%;
+    padding: 15px 0; /* Make buttons fill the width on smaller devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .success-page {
+    padding: 10px;
+    margin: 20px;
+  }
+
+  .success-page h1 {
+    font-size: 20px; /* Adjust heading font size */
+  }
+
+  .social-buttons button {
+    font-size: 14px; /* Adjust button font size for small screens */
+  }
+}

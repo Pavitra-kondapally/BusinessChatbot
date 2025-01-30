@@ -1,0 +1,232 @@
+/* General Reset for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Color Palette */
+:root {
+  --primary-color: #ff4b2b;
+  --secondary-color: #4facfe;
+  --tertiary-color: #28a745;
+  --accent-color: #db4437;
+  --background-color: #f0f0f0;
+  --text-color: #333;
+  --button-hover: #218838;
+}
+
+button {
+  border-radius: 7px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+input, textarea {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* General Styles for Home Page */
+.home-container {
+  text-align: center;
+  background: linear-gradient(45deg, #3d7068, #14453d);
+  padding: 40px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 800px;
+  margin: 50px auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.home-container h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.home-container p {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap; /* Allows features to wrap on smaller screens */
+}
+
+.feature {
+  background: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Default width for larger screens */
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.feature h3 {
+  color: #14453d;
+  font-size: 1.5rem;
+}
+
+.feature p {
+  color: #777;
+}
+
+.feature:hover {
+  transform: translateY(-5px); /* Slightly lift the feature box on hover */
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles for smaller screens (Tablets and smaller) */
+@media (max-width: 1024px) {
+  .home-container {
+    padding: 30px;
+    width: 90%; /* Ensure the container takes most of the width on small screens */
+  }
+
+  .home-container h1 {
+    font-size: 2rem; /* Slightly smaller header */
+  }
+
+  .home-container p {
+    font-size: 1.1rem; /* Slightly smaller text */
+  }
+
+  .features {
+    gap: 20px; /* Reduce gap between feature cards */
+    justify-content: center; /* Center the feature cards */
+  }
+
+  .feature {
+    width: 45%; /* Each feature takes 45% width on tablets */
+    margin-bottom: 20px; /* Add space between rows of features */
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  .home-container {
+    padding: 20px;
+    width: 95%; /* Take most of the width on mobile */
+  }
+
+  .home-container h1 {
+    font-size: 1.8rem; /* Smaller header for mobile */
+  }
+
+  .home-container p {
+    font-size: 1rem; /* Adjust font size for better readability on mobile */
+  }
+
+  .features {
+    flex-direction: column; /* Stack the feature cards vertically on mobile */
+    gap: 15px; /* Reduce gap */
+  }
+
+  .feature {
+    width: 100%; /* Each feature takes 100% width on mobile */
+  }
+}
+
+/* Navbar Styles */
+.navbar {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  padding: 10px 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #fff1e6;
+}
+
+/* Align Logout Button to the Right */
+.logout-container {
+  margin-left: auto;
+}
+
+.logout-btn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-size: large;
+}
+
+.logout-btn:hover {
+  background: #ff416c;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .navbar ul li {
+    margin-right: 10px;
+  }
+
+  .logout-container {
+    margin-left: auto;
+  }
+}

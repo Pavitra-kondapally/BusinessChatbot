@@ -1,0 +1,119 @@
+.integration-card {
+    text-align: center;
+    background: linear-gradient(45deg, #3d7068, #14453d);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    margin: 50px auto;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.topbar {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.integration-heading {
+    color: #fff;
+}
+
+.topbar a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.topbar a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .integration-card {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+.integration-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .option-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  /* Custom styling for 'View Instructions' button */
+  .option-btn:nth-child(1) {
+    background-color: #007BFF; /* Green */
+    color: white;
+    width: 200px; /* Adjust the width */
+  }
+  
+  .option-btn:nth-child(1):hover {
+    background-color: #0056b3; /* Darker green on hover */
+  }
+  
+  /* Custom styling for 'Mail Instructions' button */
+  .option-btn:nth-child(2) {
+    background-color: #007BFF; /* Blue */
+    color: white;
+    width: 200px; /* Adjust the width */
+  }
+  
+  .option-btn:nth-child(2):hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
