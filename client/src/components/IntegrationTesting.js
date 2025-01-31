@@ -1,26 +1,25 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";  // for navigation
+import { useNavigate } from "react-router-dom"; 
 import "./IntegrationTesting.css";
 
 function IntegrationTesting() {
   const [showIntegrationOptions, setShowIntegrationOptions] = useState(false);
-  const navigate = useNavigate();  // Initialize the navigate function
+  const navigate = useNavigate();
 
   const handleTestChatbot = () => {
-    // Redirecting to the e-commerce page with the chatbot
-    navigate("/ecommerce");  // This will navigate to the EcommercePage component
+    navigate("/ecommerce");
   };
 
   const handleTestIntegration = () => {
-    // Simulating API call to check integration success
+    // Simulating API call for success/failure
     const integrationSuccess = Math.random() > 0.8; // 50% chance of success
 
     if (integrationSuccess) {
-      // Open SuccessPage in new tab on successful integration
-      window.open("/success", "_blank"); 
+      // Open SuccessPage in a new tab
+      window.open(window.location.origin + "/success", "_blank");
     } else {
-      // Open FailurePage in new tab on failed integration
-      window.open("/failure", "_blank"); 
+      // Open FailurePage in a new tab
+      window.open(window.location.origin + "/failure", "_blank");
     }
   };
 
@@ -31,12 +30,10 @@ function IntegrationTesting() {
       </div>
       <h2 className="integration-heading">Chatbot Integration & Testing</h2>
 
-      {/* Test Chatbot Button */}
       <button type="button" className="test-btn" onClick={handleTestChatbot}>
         Test Chatbot
       </button>
 
-      {/* Integrate on your website Button (2nd button) */}
       <button
         type="button"
         className="test-btn"
@@ -45,12 +42,10 @@ function IntegrationTesting() {
         Integrate on your website
       </button>
 
-      {/* Test Integration Button (3rd button) */}
       <button type="button" className="test-btn" onClick={handleTestIntegration}>
         Test Integration
       </button>
 
-      {/* Integration Options */}
       {showIntegrationOptions && (
         <div className="integration-options">
           <button

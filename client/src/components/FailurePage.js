@@ -1,5 +1,5 @@
-import React from 'react';
-import './FailurePage.css';
+import React from "react";
+import "./FailurePage.css";
 
 function FailurePage() {
   return (
@@ -7,8 +7,12 @@ function FailurePage() {
       <h1>Integration Failed</h1>
       <p>It seems the integration process didn't work. Please try again or contact support.</p>
 
-      <button className="retry-btn" onClick={() => window.location.reload()}>Try Again</button>
-      <button className="contact-support-btn" onClick={() => alert("Contacting support...")}>Contact Support</button>
+      <button className="retry-btn" onClick={() => window.location.href = "/integration-testing"}>
+        Try Again
+      </button>
+      <button className="contact-support-btn" onClick={() => alert("Contacting support...")}>
+        Contact Support
+      </button>
     </div>
   );
 }
