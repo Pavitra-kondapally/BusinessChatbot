@@ -37,21 +37,15 @@ Business Chatbot is a web-based application designed to simulate chatbot integra
 
 ## 📂 Project Setup  
 
-### 🔹 Clone the repository:  
+To set up and run the project, execute the following command:  
+
+### 🔹 Clone the repository and set up the project:  
 ```sh
 git clone https://github.com/Pavitra-kondapally/BusinessChatbot.git  
-
-### 🔹  Install dependencies:
-```sh
-cd BusinessChatbot
-
-### 🔹  Start the development server:
-```sh
-npm start
-
-### 🔹  Build for production:
-```sh
-npm run build
+cd BusinessChatbot  
+npm install  
+npm start  
+npm run build  
 
 ### 🔹 Live Demo: [Business Chatbot](https://chatbot-business.netlify.app/)
 
