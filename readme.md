@@ -45,7 +45,8 @@ git clone https://github.com/Pavitra-kondapally/BusinessChatbot.git
 cd BusinessChatbot  
 npm install  
 npm start  
-npm run build  
+npm run build
+```
 
 🔹 Live Demo
 You can view the live demo of the application at:
