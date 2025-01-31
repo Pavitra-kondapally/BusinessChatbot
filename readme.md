@@ -47,7 +47,9 @@ npm install
 npm start  
 npm run build  
 
-### 🔹 Live Demo: [Business Chatbot](https://chatbot-business.netlify.app/)
+🔹 Live Demo
+You can view the live demo of the application at:
+[Business Chatbot](https://chatbot-business.netlify.app/)
 
 
 
